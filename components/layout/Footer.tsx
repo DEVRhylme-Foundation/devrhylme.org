@@ -1,5 +1,44 @@
 import Link from "next/link";
-import { Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { Github, Twitter, Linkedin, Mail, Youtube, MessageCircle } from "lucide-react";
+
+const socialLinks = [
+  {
+    name: "GitHub",
+    href: "https://github.com/devrhylme",
+    icon: Github,
+    ariaLabel: "Visit our GitHub profile",
+  },
+  {
+    name: "Twitter",
+    href: "https://x.com/devrhylme",
+    icon: Twitter,
+    ariaLabel: "Follow us on Twitter/X",
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/company/devrhylme",
+    icon: Linkedin,
+    ariaLabel: "Connect with us on LinkedIn",
+  },
+  {
+    name: "YouTube",
+    href: "https://www.youtube.com/@devrhylme",
+    icon: Youtube,
+    ariaLabel: "Subscribe to our YouTube channel",
+  },
+  {
+    name: "Discord",
+    href: "https://discord.com/invite/xjwZzGKDVR",
+    icon: MessageCircle,
+    ariaLabel: "Join our Discord community",
+  },
+  {
+    name: "Email",
+    href: "mailto:admin@devrhylme.org",
+    icon: Mail,
+    ariaLabel: "Send us an email",
+  },
+];
 
 const footerLinks = {
   organization: [
@@ -16,9 +55,9 @@ const footerLinks = {
   ],
   community: [
     { name: "Get Involved", href: "/community" },
-    { name: "GitHub", href: "https://github.com/devrhylme" },
-    { name: "Discord", href: "#" },
-    { name: "Twitter", href: "#" },
+    { name: "GitHub", href: "https://github.com/devrhylme", external: true },
+    { name: "Discord", href: "https://discord.com/invite/xjwZzGKDVR", external: true },
+    { name: "Twitter", href: "https://x.com/devrhylme", external: true },
   ],
 };
 
@@ -36,18 +75,21 @@ export default function Footer() {
               Building open-source solutions for a better tomorrow.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-white transition-colors">
-                <Github size={20} />
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                <Linkedin size={20} />
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                <Mail size={20} />
-              </a>
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.ariaLabel}
+                    className="text-gray-400 hover:text-white focus:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md transition-colors"
+                  >
+                    <Icon size={20} />
+                  </a>
+                );
+              })}
             </div>
           </div>
 
