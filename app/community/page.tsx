@@ -31,7 +31,7 @@ const contributionWays = [
     icon: Bug,
     title: "Report Issues",
     description: "Found a bug? Report it on GitHub and help us improve our projects.",
-    link: "https://github.com/devrhylme",
+    link: "https://github.com/DEVRhylme-Foundation",
   },
   {
     icon: BookOpen,
@@ -43,13 +43,13 @@ const contributionWays = [
     icon: Lightbulb,
     title: "Share Ideas",
     description: "Suggest new features or improvements through our discussion forums.",
-    link: "https://github.com/devrhylme/discussions",
+    link: "https://github.com/DEVRhylme-Foundation/discussions",
   },
   {
     icon: MessageCircle,
     title: "Help Others",
     description: "Answer questions and help fellow developers in our community.",
-    link: "#",
+    link: "https://discord.com/invite/xjwZzGKDVR",
   },
   {
     icon: Award,
@@ -64,21 +64,22 @@ const communityChannels = [
     name: "GitHub",
     icon: Github,
     description: "Contribute to our projects, report issues, and join discussions.",
-    link: "https://github.com/devrhylme",
+    link: "https://github.com/DEVRhylme-Foundation",
     color: "bg-gray-900 hover:bg-gray-800",
   },
   {
     name: "Discord",
     icon: MessageCircle,
-    description: "Chat with the community in real-time and get help.",
-    link: "#",
+    description: "Our primary community hub. Chat in real-time and get help.",
+    link: "https://discord.com/invite/xjwZzGKDVR",
     color: "bg-indigo-600 hover:bg-indigo-700",
+    isPrimary: true,
   },
   {
-    name: "Twitter",
+    name: "Twitter / X",
     icon: Users,
     description: "Follow us for updates, news, and community highlights.",
-    link: "#",
+    link: "https://x.com/DevRhylme1",
     color: "bg-blue-500 hover:bg-blue-600",
   },
 ];
@@ -120,7 +121,7 @@ export default function CommunityPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-50 via-white to-blue-50 py-20">
+      <section className="bg-linear-to-br from-primary-50 via-white to-blue-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -131,7 +132,7 @@ export default function CommunityPage() {
               enthusiasts. Together, we&apos;re building the future of technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://github.com/devrhylme">
+              <Link href="https://github.com/DEVRhylme-Foundation">
                 <Button size="lg">
                   <Github className="mr-2" size={20} />
                   Start Contributing
@@ -209,7 +210,7 @@ export default function CommunityPage() {
 
                 <div className="flex gap-6 mb-8">
                   {/* Step Number */}
-                  <div className="flex-shrink-0">
+                  <div className="shrink-0">
                     <div className="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg">
                       {guideline.step}
                     </div>
@@ -261,9 +262,15 @@ export default function CommunityPage() {
                   href={channel.link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Join us on ${channel.name}`}
                   className="group"
                 >
-                  <Card hover className="p-6 text-center h-full">
+                  <Card hover className={`p-6 text-center h-full ${channel.isPrimary ? 'ring-2 ring-indigo-500 ring-offset-2' : ''}`}>
+                    {channel.isPrimary && (
+                      <span className="inline-block bg-indigo-100 text-indigo-700 text-xs font-semibold px-2.5 py-1 rounded-full mb-3">
+                        Primary Community
+                      </span>
+                    )}
                     <div className={`w-16 h-16 ${channel.color} text-white rounded-xl flex items-center justify-center mx-auto mb-4 transition-transform group-hover:scale-110`}>
                       <Icon size={32} />
                     </div>
@@ -312,7 +319,7 @@ export default function CommunityPage() {
             building amazing projects together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://github.com/devrhylme" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/DEVRhylme-Foundation" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="secondary">
                 <Github className="mr-2" size={20} />
                 View Projects on GitHub

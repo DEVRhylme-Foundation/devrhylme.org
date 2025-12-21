@@ -99,7 +99,7 @@ export default function TeamPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-50 via-white to-blue-50 py-20">
+      <section className="bg-linear-to-br from-primary-50 via-white to-blue-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -235,7 +235,7 @@ export default function TeamPage() {
               We have <span className="font-bold text-primary-600">500+</span> amazing contributors!
             </p>
             <a
-              href="https://github.com/devrhylme"
+              href="https://github.com/DEVRhylme-Foundation"
               target="_blank"
               rel="noopener noreferrer"
             >

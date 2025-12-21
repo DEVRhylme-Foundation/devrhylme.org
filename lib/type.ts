@@ -11,6 +11,8 @@ export interface Project {
   forks?: number;
   contributors?: number;
   featured?: boolean;
+  status?: "active" | "maintained" | "archived";
+  category?: "documentation" | "open-source-tools" | "community-platforms" | "developer-utilities" | "ai-ml";
 }
 
 export interface TeamMember {
