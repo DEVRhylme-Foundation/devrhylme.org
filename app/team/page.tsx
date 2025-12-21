@@ -235,7 +235,7 @@ export default function TeamPage() {
               We have <span className="font-bold text-primary-600">500+</span> amazing contributors!
             </p>
             <a
-              href="https://github.com/devrhylme"
+              href="https://github.com/DEVRhylme-Foundation"
               target="_blank"
               rel="noopener noreferrer"
             >

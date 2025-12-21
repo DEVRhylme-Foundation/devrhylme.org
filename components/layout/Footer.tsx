@@ -4,19 +4,19 @@ import { Github, Twitter, Linkedin, Mail, Youtube, MessageCircle } from "lucide-
 const socialLinks = [
   {
     name: "GitHub",
-    href: "https://github.com/devrhylme",
+    href: "https://github.com/DEVRhylme-Foundation",
     icon: Github,
     ariaLabel: "Visit our GitHub profile",
   },
   {
     name: "Twitter",
-    href: "https://x.com/devrhylme",
+    href: "https://x.com/DevRhylme1",
     icon: Twitter,
     ariaLabel: "Follow us on Twitter/X",
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/company/devrhylme",
+    href: "https://www.linkedin.com/company/devrhylme1",
     icon: Linkedin,
     ariaLabel: "Connect with us on LinkedIn",
   },
@@ -55,9 +55,9 @@ const footerLinks = {
   ],
   community: [
     { name: "Get Involved", href: "/community" },
-    { name: "GitHub", href: "https://github.com/devrhylme", external: true },
+    { name: "GitHub", href: "https://github.com/DEVRhylme-Foundation", external: true },
     { name: "Discord", href: "https://discord.com/invite/xjwZzGKDVR", external: true },
-    { name: "Twitter", href: "https://x.com/devrhylme", external: true },
+    { name: "Twitter", href: "https://x.com/DevRhylme1", external: true },
   ],
 };
 
@@ -77,14 +77,15 @@ export default function Footer() {
             <div className="flex space-x-4">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
+                const isMailto = social.href.startsWith("mailto:");
                 return (
                   <a
                     key={social.name}
                     href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target={isMailto ? "_self" : "_blank"}
+                    rel={isMailto ? undefined : "noopener noreferrer"}
                     aria-label={social.ariaLabel}
-                    className="text-gray-400 hover:text-white focus:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md transition-colors"
+                    className="text-gray-400 hover:text-white focus:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md transition-colors inline-flex items-center justify-center p-1"
                   >
                     <Icon size={20} />
                   </a>

@@ -32,21 +32,21 @@ const contactInfo = [
 const socialLinks = [
   {
     name: "GitHub",
-    href: "https://github.com/devrhylme",
+    href: "https://github.com/DEVRhylme-Foundation",
     icon: Github,
     ariaLabel: "Visit our GitHub profile",
     color: "bg-gray-900 hover:bg-gray-800",
   },
   {
     name: "Twitter / X",
-    href: "https://x.com/devrhylme",
+    href: "https://x.com/DevRhylme1",
     icon: Twitter,
     ariaLabel: "Follow us on Twitter/X",
     color: "bg-blue-500 hover:bg-blue-600",
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/company/devrhylme",
+    href: "https://www.linkedin.com/company/devrhylme1",
     icon: Linkedin,
     ariaLabel: "Connect with us on LinkedIn",
     color: "bg-blue-700 hover:bg-blue-800",

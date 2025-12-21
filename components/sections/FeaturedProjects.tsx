@@ -14,7 +14,7 @@ const featuredProjects = [
     tags: ["TypeScript", "React", "Node.js"],
     stars: 1200,
     forks: 250,
-    githubUrl: "https://github.com/devrhylme/project-alpha",
+    githubUrl: "https://github.com/DEVRhylme-Foundation/project-alpha",
   },
   {
     id: "2",
@@ -23,7 +23,7 @@ const featuredProjects = [
     tags: ["CLI", "Productivity", "JavaScript"],
     stars: 850,
     forks: 180,
-    githubUrl: "https://github.com/devrhylme/devtools-suite",
+    githubUrl: "https://github.com/DEVRhylme-Foundation/devtools-suite",
   },
   {
     id: "3",
@@ -32,7 +32,7 @@ const featuredProjects = [
     tags: ["Go", "Microservices", "API"],
     stars: 2100,
     forks: 420,
-    githubUrl: "https://github.com/devrhylme/api-gateway",
+    githubUrl: "https://github.com/DEVRhylme-Foundation/api-gateway",
   },
 ];
 

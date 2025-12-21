@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@devrhylme",
-    creator: "@devrhylme",
+    site: "@DevRhylme1",
+    creator: "@DevRhylme1",
     title: "DevRhylme Foundation - Open Source Organization",
     description: "Building open-source solutions for a better tomorrow. Join our community of developers and contributors.",
     images: ["/og-image.png"],

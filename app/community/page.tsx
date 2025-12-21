@@ -31,7 +31,7 @@ const contributionWays = [
     icon: Bug,
     title: "Report Issues",
     description: "Found a bug? Report it on GitHub and help us improve our projects.",
-    link: "https://github.com/devrhylme",
+    link: "https://github.com/DEVRhylme-Foundation",
   },
   {
     icon: BookOpen,
@@ -43,7 +43,7 @@ const contributionWays = [
     icon: Lightbulb,
     title: "Share Ideas",
     description: "Suggest new features or improvements through our discussion forums.",
-    link: "https://github.com/devrhylme/discussions",
+    link: "https://github.com/DEVRhylme-Foundation/discussions",
   },
   {
     icon: MessageCircle,
@@ -64,7 +64,7 @@ const communityChannels = [
     name: "GitHub",
     icon: Github,
     description: "Contribute to our projects, report issues, and join discussions.",
-    link: "https://github.com/devrhylme",
+    link: "https://github.com/DEVRhylme-Foundation",
     color: "bg-gray-900 hover:bg-gray-800",
   },
   {
@@ -79,7 +79,7 @@ const communityChannels = [
     name: "Twitter / X",
     icon: Users,
     description: "Follow us for updates, news, and community highlights.",
-    link: "https://x.com/devrhylme",
+    link: "https://x.com/DevRhylme1",
     color: "bg-blue-500 hover:bg-blue-600",
   },
 ];
@@ -132,7 +132,7 @@ export default function CommunityPage() {
               enthusiasts. Together, we&apos;re building the future of technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://github.com/devrhylme">
+              <Link href="https://github.com/DEVRhylme-Foundation">
                 <Button size="lg">
                   <Github className="mr-2" size={20} />
                   Start Contributing
@@ -319,7 +319,7 @@ export default function CommunityPage() {
             building amazing projects together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://github.com/devrhylme" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/DEVRhylme-Foundation" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="secondary">
                 <Github className="mr-2" size={20} />
                 View Projects on GitHub
