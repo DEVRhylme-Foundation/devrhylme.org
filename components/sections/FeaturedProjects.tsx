@@ -9,30 +9,30 @@ import { motion } from "framer-motion";
 const featuredProjects = [
   {
     id: "1",
-    title: "Project Alpha",
-    description: "A modern web framework for building fast and scalable applications with TypeScript.",
-    tags: ["TypeScript", "React", "Node.js"],
-    stars: 1200,
-    forks: 250,
-    githubUrl: "https://github.com/DEVRhylme-Foundation/project-alpha",
+    title: "DevRhylme Website",
+    description: "The official DevRhylme Foundation website built with Next.js, TypeScript, and Tailwind CSS.",
+    tags: ["TypeScript", "Next.js", "Tailwind CSS"],
+    stars: 1,
+    forks: 4,
+    githubUrl: "https://github.com/DEVRhylme-Foundation/devrhylme.org",
   },
   {
-    id: "2",
-    title: "DevTools Suite",
-    description: "Collection of developer productivity tools to streamline your workflow.",
-    tags: ["CLI", "Productivity", "JavaScript"],
-    stars: 850,
-    forks: 180,
-    githubUrl: "https://github.com/DEVRhylme-Foundation/devtools-suite",
+    id: "4",
+    title: "SAMURAI",
+    description: "Adapting Segment Anything Model for Zero-Shot Visual Tracking with Motion-Aware Memory.",
+    tags: ["Python", "Computer Vision", "AI"],
+    stars: 8,
+    forks: 12,
+    githubUrl: "https://github.com/DEVRhylme-Foundation/samurai",
   },
   {
-    id: "3",
-    title: "API Gateway",
-    description: "Lightweight and flexible API gateway built for microservices architecture.",
-    tags: ["Go", "Microservices", "API"],
-    stars: 2100,
-    forks: 420,
-    githubUrl: "https://github.com/DEVRhylme-Foundation/api-gateway",
+    id: "6",
+    title: "ForgeX",
+    description: "Quickly spin up Go projects using popular frameworks with an intuitive CLI tool.",
+    tags: ["Go", "CLI", "Developer Tools"],
+    stars: 8,
+    forks: 15,
+    githubUrl: "https://github.com/DEVRhylme-Foundation/ForgeX",
   },
 ];
 
@@ -75,7 +75,7 @@ export default function FeaturedProjects() {
                   </a>
                 </div>
 
-                <p className="text-gray-600 mb-4 flex-grow">
+                <p className="text-gray-600 mb-4 grow">
                   {project.description}
                 </p>
 
