@@ -10,6 +10,45 @@ export const metadata: Metadata = {
   title: "DevRhylme Foundation - Open Source Organization",
   description: "Building open-source solutions for a better tomorrow. Join our community of developers and contributors.",
   keywords: ["open source", "development", "community", "foundation", "devrhylme"],
+  authors: [{ name: "DevRhylme Foundation" }],
+  creator: "DevRhylme Foundation",
+  publisher: "DevRhylme Foundation",
+  metadataBase: new URL("https://devrhylme.org"),
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://devrhylme.org",
+    siteName: "DevRhylme Foundation",
+    title: "DevRhylme Foundation - Open Source Organization",
+    description: "Building open-source solutions for a better tomorrow. Join our community of developers and contributors.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "DevRhylme Foundation - Building open-source solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@DevRhylme1",
+    creator: "@DevRhylme1",
+    title: "DevRhylme Foundation - Open Source Organization",
+    description: "Building open-source solutions for a better tomorrow. Join our community of developers and contributors.",
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
