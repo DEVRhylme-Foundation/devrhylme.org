@@ -5,7 +5,7 @@ A modern, open-source foundation website built with Next.js 15, TypeScript, and 
 ![DevRhylme Foundation](https://img.shields.io/badge/DevRhylme-Foundation-blue)
 ![Next.js](https://img.shields.io/badge/Next.js-15-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/DEVRhylme-Foundation/devrhylme.org/blob/main/LICENSE)
 
 ## 🌟 Features
 

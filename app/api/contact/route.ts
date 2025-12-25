@@ -1,3 +1,12 @@
+/**
+ * MIT License
+ * Copyright (c) 2025 DevRhylme
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction.
+ */
+
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { db } from "@/lib/firebase/config";

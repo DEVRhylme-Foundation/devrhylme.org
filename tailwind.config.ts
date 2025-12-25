@@ -1,3 +1,5 @@
+// MIT License - Copyright (c) 2025 DevRhylme
+
 import type { Config } from 'tailwindcss'
 
 const config: Config = {

@@ -1,3 +1,12 @@
+/**
+ * MIT License
+ * Copyright (c) 2025 DevRhylme
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction.
+ */
+
 import Link from "next/link";
 import { Github, Twitter, Linkedin, Mail } from "lucide-react";
 
@@ -108,6 +117,17 @@ export default function Footer() {
           <p>
             © {new Date().getFullYear()} DevRhylme Foundation. All rights
             reserved.
+          </p>
+          <p className="mt-2">
+            Licensed under{" "}
+            <a
+              href="https://github.com/DEVRhylme-Foundation/devrhylme.org/blob/main/LICENSE"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-400 hover:text-primary-300 transition-colors"
+            >
+              MIT License
+            </a>
           </p>
         </div>
       </div>
