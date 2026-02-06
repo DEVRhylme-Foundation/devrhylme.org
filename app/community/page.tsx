@@ -10,10 +10,14 @@ import {
   GitPullRequest,
   Bug,
   Lightbulb,
-  Award
+  Award,
+  Shield,
+  MessagesSquare,
+  Sparkles
 } from "lucide-react";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
+import { SOCIAL_LINKS, COMMUNITY_GUIDELINES } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Community - DevRhylme Foundation",
@@ -31,7 +35,7 @@ const contributionWays = [
     icon: Bug,
     title: "Report Issues",
     description: "Found a bug? Report it on GitHub and help us improve our projects.",
-    link: "https://github.com/devrhylme",
+    link: SOCIAL_LINKS.github,
   },
   {
     icon: BookOpen,
@@ -43,13 +47,13 @@ const contributionWays = [
     icon: Lightbulb,
     title: "Share Ideas",
     description: "Suggest new features or improvements through our discussion forums.",
-    link: "https://github.com/devrhylme/discussions",
+    link: SOCIAL_LINKS.githubDiscussions,
   },
   {
     icon: MessageCircle,
     title: "Help Others",
     description: "Answer questions and help fellow developers in our community.",
-    link: "#",
+    link: SOCIAL_LINKS.discord,
   },
   {
     icon: Award,
@@ -64,21 +68,21 @@ const communityChannels = [
     name: "GitHub",
     icon: Github,
     description: "Contribute to our projects, report issues, and join discussions.",
-    link: "https://github.com/devrhylme",
+    link: SOCIAL_LINKS.github,
     color: "bg-gray-900 hover:bg-gray-800",
   },
   {
     name: "Discord",
     icon: MessageCircle,
     description: "Chat with the community in real-time and get help.",
-    link: "#",
+    link: SOCIAL_LINKS.discord,
     color: "bg-indigo-600 hover:bg-indigo-700",
   },
   {
     name: "Twitter",
     icon: Users,
     description: "Follow us for updates, news, and community highlights.",
-    link: "#",
+    link: SOCIAL_LINKS.twitter,
     color: "bg-blue-500 hover:bg-blue-600",
   },
 ];
@@ -131,7 +135,7 @@ export default function CommunityPage() {
               enthusiasts. Together, we&apos;re building the future of technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://github.com/devrhylme">
+              <Link href={SOCIAL_LINKS.github}>
                 <Button size="lg">
                   <Github className="mr-2" size={20} />
                   Start Contributing
@@ -177,12 +181,122 @@ export default function CommunityPage() {
                   <a
                     href={way.link}
                     className="text-primary-600 hover:text-primary-700 font-semibold text-sm inline-flex items-center"
+                    target={way.link.startsWith("http") ? "_blank" : undefined}
+                    rel={way.link.startsWith("http") ? "noopener noreferrer" : undefined}
                   >
                     Learn more →
                   </a>
                 </Card>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* GitHub Discussions Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-100 text-purple-700 font-medium mb-6">
+                <MessagesSquare size={16} className="mr-2" />
+                Community Forums
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Join the Discussion on GitHub
+              </h2>
+              <p className="text-lg text-gray-600 mb-8">
+                Our GitHub Discussions is the place to ask questions, share ideas, and connect with other community members. It&apos;s our central hub for all non-code conversations.
+              </p>
+              
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 mt-1">
+                    <Lightbulb size={16} />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-semibold text-gray-900">Share Ideas</h3>
+                    <p className="text-gray-600">Propose new features and improvements for our projects.</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mt-1">
+                    <MessageCircle size={16} />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-semibold text-gray-900">Q&A and Help</h3>
+                    <p className="text-gray-600">Get help with installation, usage, or development issues.</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mt-1">
+                    <Sparkles size={16} />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-semibold text-gray-900">Show & Tell</h3>
+                    <p className="text-gray-600">Show off what you&apos;ve built with DevRhylme tools.</p>
+                  </div>
+                </div>
+              </div>
+
+              <a 
+                href={SOCIAL_LINKS.githubDiscussions}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button size="lg" className="bg-gray-900 hover:bg-gray-800 text-white">
+                  <Github className="mr-2" size={20} />
+                  Go to Discussions
+                </Button>
+              </a>
+            </div>
+            
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-200 to-blue-200 rounded-2xl transform rotate-3 scale-105 opacity-50 blur-xl"></div>
+              <Card className="relative p-8 border-gray-200 shadow-xl">
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-4 border-b border-gray-100 pb-4">
+                    <div className="w-10 h-10 rounded-full bg-gray-200"></div>
+                    <div className="flex-1">
+                      <div className="h-4 w-3/4 bg-gray-200 rounded mb-2"></div>
+                      <div className="h-3 w-1/2 bg-gray-100 rounded"></div>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="h-4 w-full bg-gray-100 rounded"></div>
+                    <div className="h-4 w-full bg-gray-100 rounded"></div>
+                    <div className="h-4 w-5/6 bg-gray-100 rounded"></div>
+                  </div>
+                  <div className="flex gap-2 pt-2">
+                    <span className="px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-xs font-medium">question</span>
+                    <span className="px-3 py-1 rounded-full bg-green-50 text-green-600 text-xs font-medium">help wanted</span>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Community Guidelines Section */}
+      <section className="py-20 bg-white border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 text-red-600 mb-6">
+            <Shield size={32} />
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Community Guidelines
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+            We are committed to providing a friendly, safe, and welcoming environment for all, regardless of gender, sexual orientation, disability, ethnicity, religion, or similar personal characteristic.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={COMMUNITY_GUIDELINES.codeOfConduct} target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="lg">
+                <BookOpen className="mr-2" size={20} />
+                Read Code of Conduct
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -312,7 +426,7 @@ export default function CommunityPage() {
             building amazing projects together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://github.com/devrhylme" target="_blank" rel="noopener noreferrer">
+            <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="secondary">
                 <Github className="mr-2" size={20} />
                 View Projects on GitHub

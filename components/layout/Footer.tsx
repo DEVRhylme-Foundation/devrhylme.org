@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { SOCIAL_LINKS } from "@/lib/constants";
 
 const footerLinks = {
   organization: [
@@ -16,9 +17,9 @@ const footerLinks = {
   ],
   community: [
     { name: "Get Involved", href: "/community" },
-    { name: "GitHub", href: "https://github.com/devrhylme" },
-    { name: "Discord", href: "#" },
-    { name: "Twitter", href: "#" },
+    { name: "GitHub", href: SOCIAL_LINKS.github },
+    { name: "Discord", href: SOCIAL_LINKS.discord },
+    { name: "Twitter", href: SOCIAL_LINKS.twitter },
   ],
 };
 
@@ -36,16 +37,38 @@ export default function Footer() {
               Building open-source solutions for a better tomorrow.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-white transition-colors">
+              <a 
+                href={SOCIAL_LINKS.github} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-white transition-colors"
+                aria-label="GitHub"
+              >
                 <Github size={20} />
               </a>
-              <a href="#" className="hover:text-white transition-colors">
+              <a 
+                href={SOCIAL_LINKS.twitter} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-white transition-colors"
+                aria-label="Twitter"
+              >
                 <Twitter size={20} />
               </a>
-              <a href="#" className="hover:text-white transition-colors">
+              <a 
+                href={SOCIAL_LINKS.linkedin} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-white transition-colors"
+                aria-label="LinkedIn"
+              >
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="hover:text-white transition-colors">
+              <a 
+                href={SOCIAL_LINKS.email} 
+                className="hover:text-white transition-colors"
+                aria-label="Email"
+              >
                 <Mail size={20} />
               </a>
             </div>
@@ -91,12 +114,23 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.community.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </Link>
+                  {link.href.startsWith("http") ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm hover:text-white transition-colors"
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-sm hover:text-white transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { Mail, MapPin, Phone, MessageCircle } from "lucide-react";
 import Card from "@/components/ui/Card";
 import ContactForm from "@/components/ContactForm";
+import { SOCIAL_LINKS } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contact Us - DevRhylme Foundation",
@@ -13,13 +14,13 @@ const contactInfo = [
     icon: Mail,
     title: "Email",
     details: "contact@devrhylme.org",
-    link: "mailto:contact@devrhylme.org",
+    link: SOCIAL_LINKS.email,
   },
   {
     icon: MessageCircle,
     title: "Community",
     details: "Join our Discord",
-    link: "#",
+    link: SOCIAL_LINKS.discord,
   },
   {
     icon: MapPin,
@@ -79,7 +80,12 @@ export default function ContactPage() {
                   );
 
                   return info.link ? (
-                    <a key={info.title} href={info.link}>
+                    <a 
+                      key={info.title} 
+                      href={info.link}
+                      target={info.link.startsWith("http") ? "_blank" : undefined}
+                      rel={info.link.startsWith("http") ? "noopener noreferrer" : undefined}
+                    >
                       {content}
                     </a>
                   ) : (

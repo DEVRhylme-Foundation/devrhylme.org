@@ -5,6 +5,8 @@ import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import Link from "next/link";
 
+import { SOCIAL_LINKS } from "@/lib/constants";
+
 export const metadata: Metadata = {
   title: "Our Team - DevRhylme Foundation",
   description: "Meet the passionate individuals behind DevRhylme Foundation and our amazing community of contributors.",
@@ -235,7 +237,7 @@ export default function TeamPage() {
               We have <span className="font-bold text-primary-600">500+</span> amazing contributors!
             </p>
             <a
-              href="https://github.com/devrhylme"
+              href={SOCIAL_LINKS.github}
               target="_blank"
               rel="noopener noreferrer"
             >

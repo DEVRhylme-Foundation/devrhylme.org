@@ -235,13 +235,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-For support, email contact@devrhylme.org or join our Discord community.
+For support, email contact@devrhylme.org or join our [Discord community](https://discord.gg/xjwZzGKDVR).
 
 ## 🔗 Links
 
 - Website: [https://devrhylme.org](https://devrhylme.org)
-- GitHub: [https://github.com/devrhylme](https://github.com/DEVRhylme-Foundation)
+- GitHub: [https://github.com/DEVRhylme-Foundation](https://github.com/DEVRhylme-Foundation)
 - Documentation: [https://devrhylme.org/docs](https://devrhylme.org/docs)
+- Discussions: [https://github.com/orgs/DEVRhylme-Foundation/discussions](https://github.com/orgs/DEVRhylme-Foundation/discussions)
 
 ---
 
